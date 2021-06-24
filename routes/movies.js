@@ -18,7 +18,7 @@ const moviesApi = (app) => {
         message: 'movies listed',
       });
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 
@@ -33,7 +33,7 @@ const moviesApi = (app) => {
         message: 'movies retrieved',
       });
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 
@@ -48,7 +48,7 @@ const moviesApi = (app) => {
         message: 'movie created',
       });
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 
@@ -67,7 +67,7 @@ const moviesApi = (app) => {
         message: 'movie updated',
       });
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 
