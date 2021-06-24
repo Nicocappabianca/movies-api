@@ -1,30 +1,30 @@
 const { moviesMock } = require('../utils/mocks/movies');
 
 class MoviesService {
-  getMovies = async () => {
+  async getMovies() {
     const movies = await Promise.resolve(moviesMock);
     return movies || [];
-  };
+  }
 
-  getMovie = async () => {
+  async getMovie() {
     const movie = await Promise.resolve(moviesMock[0]);
     return movie || {};
-  };
+  }
 
-  createMovie = async () => {
+  async createMovie() {
     const createdMovieId = await Promise.resolve(moviesMock[0].id);
     return createdMovieId;
-  };
+  }
 
-  updateMovie = async () => {
+  async updateMovie() {
     const updatedMovieId = await Promise.resolve(moviesMock[0].id);
     return updatedMovieId;
-  };
+  }
 
-  deleteMovie = async () => {
+  async deleteMovie() {
     const deletedMovieId = await Promise.resolve(moviesMock[0].id);
     return deletedMovieId;
-  };
+  }
 }
 
 module.exports = MoviesService;
