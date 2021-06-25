@@ -52,7 +52,7 @@ const moviesApi = (app) => {
     }
   });
 
-  router.put('/:movieID', async (req, res, next) => {
+  router.put('/:movieId', async (req, res, next) => {
     const { movieId } = req.params;
     const { body: movie } = req;
 
@@ -71,7 +71,7 @@ const moviesApi = (app) => {
     }
   });
 
-  router.delete('/:movieID', async (req, res, next) => {
+  router.delete('/:movieId', async (req, res, next) => {
     const { movieId } = req.params;
 
     try {
