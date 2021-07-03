@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 const { config } = require('./config/index');
@@ -14,6 +15,9 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler.js');
 
 /* Body pasrer middleware */
 app.use(express.json());
+
+/* CORS (Cross-origin resource sharing) middleware */
+app.use(cors());
 
 /* Routes */
 moviesApi(app);
